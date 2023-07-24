@@ -1,0 +1,332 @@
+@media (max-width:1250px) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+	}
+
+
+	.logo a {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+		color: #FAF6F2;
+
+	}
+	
+
+	.burger{
+		display: flex;
+		position: relative;
+		z-index: 50;
+		align-items: center;
+		justify-content: flex-end;
+		width: 30px;
+		height: 18px;
+	}
+
+	.burger span{
+		height: 2px;
+		width: 80%;
+		transform: scale(1);
+		background-color: #FAF6F2;
+	}
+
+	.burger::before, .burger::after{
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background-color: #FAF6F2;
+		transition: all 0.3s ease 0s;
+	}
+
+	.burger::before { top: 0 }
+
+	.burger::after { bottom: 0 }
+
+	/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+	
+/* Добавляем нав панель  */
+	.nav-list  {
+		display: none;
+	}
+
+	.nav-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav.open .nav-list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #3e424b;
+		color: white;
+
+		width: 100vw;
+        height: 100vh;
+
+		z-index: 11;
+		padding: 46px 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+        justify-content: center;
+        opacity: 1;
+
+		/* font-size: 35px;
+		font-weight: 600; */
+	}
+
+	.nav ul li {
+		list-style: none;
+        margin: 20px;
+        border-top: 3px solid white;
+        width: 80%;
+        text-align: center;
+    
+        padding-top: 10px;
+	}
+
+	.nav ul li a {
+        text-decoration: none;
+        padding-top: 10px;
+        color: white;
+        font-weight: 900;
+      }
+	
+      .nav ul li a:hover {
+        color: rgb(240, 197, 6);
+      }
+
+	/* .nav-link.gray {
+		color: #828282;
+	}
+
+	.nav-link.active {
+		color: #000;
+	} */
+
+	/* .nav-button {
+		position: absolute;
+		z-index: 9;
+		top: 46px;
+		right: 30px;
+	} */
+
+	/* .nav.open .nav-button {
+		position: fixed;
+	} */
+
+	/* .nav-list li {
+		list-style: none;
+	} */
+
+}
+
+@media (max-width:1250px) {
+	@keyframes slide1 {
+		0% {
+			left: 0vw;
+		}
+
+		15% {
+			left: 0vw;
+		}
+
+		20% {
+			left: -90vw;
+		}
+
+		32% {
+			left: -90vw;
+		}
+
+		35% {
+			left: -180vw;
+		}
+
+		47% {
+			left: -180vw;
+		}
+
+		50% {
+			left: -270vw;
+		}
+
+		63% {
+			left: -270vw;
+		}
+
+		66% {
+			left: -360vw;
+		}
+
+		79% {
+			left: -360vw;
+		}
+
+		82% {
+			left: -450vw;
+		}
+
+		100% {
+			left: 0vw;
+		}
+	}
+
+	.img-slider {
+		display: flex;
+		float: left;
+		position: relative;
+		width: 80%;
+		height: 60%;
+		animation-name: slide1;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		transition-duration: 2s;
+	}
+
+	.section1 {
+		width: 80%;
+		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		margin: 0px auto;
+	}
+
+	header {
+		height: 150px;
+	}
+
+	.items {
+		transform: scale(0.9);
+	}
+
+	.img-slider img {
+		height: 70vw;
+		width: 90vw;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+	/* .close {
+		display: none;
+	} */
+
+	.logo ul li a {
+		font-size: 2em;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.nav-list {
+		display: none;
+	}
+
+	/* .nav-button {
+		opacity: 1;
+
+		bottom: 8px;
+	} */
+
+	/* header {
+		height: 250px;
+		flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
+	  } */
+
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.items img {
+		max-width: 100%;
+	}
+
+
+	.img-slider img {
+		height: 60vw;
+		width: 80vw;
+	}
+
+	@keyframes slide1 {
+		0% {
+			left: 0vw;
+		}
+
+		15% {
+			left: 0vw;
+		}
+
+		20% {
+			left: -80vw;
+		}
+
+		32% {
+			left: -80vw;
+		}
+
+		35% {
+			left: -160vw;
+		}
+
+		47% {
+			left: -160vw;
+		}
+
+		50% {
+			left: -240vw;
+		}
+
+		63% {
+			left: -240vw;
+		}
+
+		66% {
+			left: -320vw;
+		}
+
+		79% {
+			left: -320vw;
+		}
+
+		82% {
+			left: -400vw;
+		}
+
+		100% {
+			left: 0vw;
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.footer2 .contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+}

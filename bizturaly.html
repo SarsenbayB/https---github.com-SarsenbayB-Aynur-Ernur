@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balabaqsha Aynur-Ernur</title>
+    <link rel="stylesheet" href="css/Stylebiz.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <ul>
+                <li><a href="#"><span>АЙНҰР</span><span>ЕРНҰР</span></a></li>
+            </ul>
+        </div>
+        <div id="nav" class="heading">
+            <ul>
+                <li><a href="#" class="under">HOME</a></li>
+                <li><a href="#" class="under">SHOP</a></li>
+                <li><a href="#" class="under">OUR PRODUCTS</a></li>
+                <li><a href="#" class="under">CONTACT US</a></li>
+                <li><a href="#" class="under">ABOUT US</a></li>
+              </ul>
+        </div>
+        <div class="burger">
+            <span></span>
+        </div>
+    </header>
+    <div class="img-slider">
+        <picture>
+            <source media="(max-width: 799px)" srcset="img/slider/imgonline1-1.jpg">
+            <img src="img/slider/imgonline-1.jpg" alt="">
+        </picture>
+        <picture>
+            <source media="(max-width: 799px)" srcset="img/slider/imgonline6-6.jpg">
+            <img src="img/slider/imgonline-6.jpg" alt="">
+        </picture>
+        <picture>
+            <source media="(max-width: 799px)" srcset="img/slider/imgonline3-3.jpg">
+            <img src="img/slider/imgonline-3.jpg" alt="">
+        </picture>
+        <picture>
+            <source media="(max-width: 799px)" srcset="img/slider/imgonline4-4.jpg">
+            <img src="img/slider/imgonline-4.jpg" alt="">
+        </picture>
+        <picture>
+            <source media="(max-width: 799px)" srcset="img/slider/imgonline5-5.jpg">
+            <img src="img/img online/imgonline-5.jpg" alt="">
+        </picture>
+    </div>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
+
+</body>
+
+</html>
